@@ -1,9 +1,10 @@
+// Initialize express web framework
 const express = require("express")
 const app = express()
 
 app.use(express.json());
 
-// list of target phrases
+// list of target phrases as input
 const wordsToReplace = ["Google", "Microsoft", "Amazon", "Deloitte", "Oracle"];
 
 const stringApi = function (input) {

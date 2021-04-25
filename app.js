@@ -10,9 +10,10 @@ const wordsToReplace = ["Google", "Microsoft", "Amazon", "Deloitte", "Oracle"];
 const stringApi = function (input) {
     let output = input.toLowerCase();
 
+//iterate through words to replace with for each loop
     for (let word of wordsToReplace){
         let target = word.toLowerCase();
-        output = output.replaceAll(target, word+"\xA9");
+        output = output.split(target).join(word+"\xA9");
 
 
     }

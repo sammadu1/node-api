@@ -12,7 +12,7 @@ const stringApi = function (input) {
 
     for (let word of wordsToReplace){
         let target = word.toLowerCase();
-        output = output.replace(target, word+"\xA9");
+        output = output.replaceAll(target, word+"\xA9");
 
 
     }
@@ -37,7 +37,7 @@ app.get("/string-api/:input", async(request, response) => {
         console.log("invalid input")
     }
 })
-
+//port to use
 const port = parseInt(process.env.PORT, 10) || 8801
 
 app.listen(port, () => {

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "sam",
   "version": "1.0.0",
   "description": "",
@@ -16,4 +17,21 @@
   "dependencies": {
     "express": "^4.17.1"
   }
+=======
+    "name": "sam",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "build": "echo 'build script executed'",
+        "test": "echo \"No test specified\"",
+        "dev": "nodemon app.js",
+        "start": "node app.js"
+    },
+    "author": "sam",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1"
+    }
+>>>>>>> df8a9c435609237a36ccc135b287656c19a95443
 }

@@ -204,14 +204,14 @@
         {
             "type": "Microsoft.Web/sites/slots",
             "kind": "app,linux",
-            "name": "[concat(parameters('site_host_name'), '/', 'staging')]",
+            "name": "[concat(parameters('site_host_name'), '/', 'dev')]",
             "apiVersion": "2016-08-01",
             "location": "[resourceGroup().location]",
             "scale": null,
             "properties": {
                 "enabled": true,
                 "hostNameSslStates": [{
-                        "name": "[concat(parameters('site_host_name'), '-', 'staging','.azurewebsites.net')]",
+                        "name": "[concat(parameters('site_host_name'), '-', 'dev','.azurewebsites.net')]",
                         "sslState": "Disabled",
                         "virtualIP": null,
                         "thumbprint": null,
@@ -219,7 +219,7 @@
                         "hostType": "Standard"
                     },
                     {
-                        "name": "[concat(parameters('site_host_name'), '-', 'staging','.scm.azurewebsites.net')]",
+                        "name": "[concat(parameters('site_host_name'), '-', 'dev','.scm.azurewebsites.net')]",
                         "sslState": "Disabled",
                         "virtualIP": null,
                         "thumbprint": null,
@@ -247,7 +247,7 @@
         },
         {
             "type": "Microsoft.Web/sites/slots/config",
-            "name": "[concat(parameters('site_host_name'), '/', 'staging', '/', 'web')]",
+            "name": "[concat(parameters('site_host_name'), '/', 'dev', '/', 'web')]",
             "apiVersion": "2016-08-01",
             "location": "[resourceGroup().location]",
             "scale": null,
@@ -276,7 +276,7 @@
                 "httpLoggingEnabled": false,
                 "logsDirectorySizeLimit": 35,
                 "detailedErrorLoggingEnabled": false,
-                "publishingUsername": "[concat('$', parameters('site_host_name'), '__staging')]",
+                "publishingUsername": "[concat('$', parameters('site_host_name'), '__dev')]",
                 "publishingPassword": null,
                 "appSettings": null,
                 "azureStorageAccounts": {},
@@ -357,7 +357,7 @@
             },
             "dependsOn": [
                 "[resourceId('Microsoft.Web/sites', parameters('site_host_name'))]",
-                "[resourceId('Microsoft.Web/sites/slots', parameters('site_host_name'), 'staging')]"
+                "[resourceId('Microsoft.Web/sites/slots', parameters('site_host_name'), 'dev')]"
             ]
         }
     ]

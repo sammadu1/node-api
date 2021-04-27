@@ -31,3 +31,4 @@ For our First iteration we used Github Actions for continuous deployment: [Using
 
 
 ## App Info
+[![Build Status](https://dev.azure.com/sufomadu/nodeapp-CICD/_apis/build/status/nodeapp-CICD?branchName=main)](https://dev.azure.com/sufomadu/nodeapp-CICD/_build/latest?definitionId=12&branchName=main)
